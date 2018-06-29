@@ -15,11 +15,12 @@ START:                  ; Inizio del programma
     BTST #0, D1         ; Verifica che il bit meno significativo di D1 sia a 0
     BNE  DISPARI        ; Se il confronto precedente è falso, salta al punto "DISPARI"  
 PARI MOVE.B P, D1       ; Carica la costante P nel registro D1
-     JMP STAMPA         ; Salta all'etichetta STAMPA
+     BRA STAMPA         ; Salta all'etichetta STAMPA
 DISPARI MOVE.B D, D1    ; Carica la costante D nel registro D1 
 STAMPA MOVE #6, D0      ; Carica il valore 6 nel registro D0 (TRAP 6 - Stampa carattere)
     TRAP #15
     END    START        ; Fine del programma
+
 
 
 
