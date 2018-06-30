@@ -17,6 +17,7 @@ LOOP:   MOVE (A0)+, D1      ; Carica il primo valore dell'array in D1 e fai punt
         END     START       ; Fine
 
 
+
 *~Font name~Courier New~
 *~Font size~10~
 *~Tab type~1~
