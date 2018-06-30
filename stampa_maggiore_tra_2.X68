@@ -11,7 +11,7 @@ START:                  ; first instruction of program
         MOVE D1, D2         ; Sposta il primo numero in D2
         TRAP #15            ; Esegue la lettura del secondo numero
         CMP D2, D1          ; Confronta D2, D1
-        BGE STAMPA          ; Se D1 >= D2
+        BGE STAMPA          ; Se D1 >= D2, vai a stampa
         MOVE D2, D1         ; Carico in D2 in D1
 STAMPA: MOVE #3, D0         ; Carica il valore 3 nel registro D0 (TRAP 3 - Stampa il valore contenuto in D1)
         TRAP #15
